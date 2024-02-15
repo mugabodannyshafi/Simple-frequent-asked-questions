@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    background: url(./images/pexels-matthew-barra-813042.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 40%;
+    margin-top: 10%;
+    height: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+}
+.container .content-container{
+    margin-top: 20px;
+}
+.container .content-container .question{
+    padding: 10px 0px;
+    font-size: 19px;
+    border-bottom: 1.5px solid #000;
+    position: relative;
+    cursor: pointer;
+}
+.container .content-container .question::after{
+    content: '+';
+    position: absolute;
+    right: -5px;
+}
+.container .content-container .answer{
+    padding-top: 10px;
+    font-size: 19px;
+    line-height: 1.5;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+.container .content-container.active .answer{
+    height: 150px;
+}
+.container .content-container.active .question{
+    font-size: 15px;
+    transition: .5s;
+}
+.container .content-container.active .question::after{
+    content: '-';
+    transition: .5s;
+    font-size: 30px;
+}
